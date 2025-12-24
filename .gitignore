@@ -3,3 +3,7 @@
 
 # Custom files
 TODO.md
+
+# jekyll
+_site
+.jekyll-cache
