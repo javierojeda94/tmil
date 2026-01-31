@@ -1,3 +1,23 @@
-<footer>
-    footer
+<footer class="site-footer" role="contentinfo">
+    <small>
+        © <span id="year"></span> TMIL (by <a href="https://www.linkedin.com/in/javierojedamaldonado/">Javier Ojeda</a>)
+        <br>
+        <small>
+          Content licensed under
+          <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license noopener noreferrer" target="_blank">
+            CC BY-NC-ND 4.0
+          </a>.
+        </small>
+        <small>
+          Code licensed under
+          <a href="https://opensource.org/license/mit/" rel="noopener noreferrer" target="_blank">
+            MIT
+          </a>.
+        </small>
+    </small>
+
+    <script>
+        // Because humans still forget to update the year manually in 2026.
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </footer>
