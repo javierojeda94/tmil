@@ -1,5 +1,5 @@
 // Design tokens and shared CSS variables
-@use "abstracts/breakpoints" as *;
+@import "abstracts/breakpoints";
 
 :root {
   --content-max-width: 100%;

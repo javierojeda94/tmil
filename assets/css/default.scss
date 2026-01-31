@@ -1,7 +1,7 @@
 ---
 ---
-@use "base/reset";
-@use "base/fonts";
-@use "abstracts/tokens";
-@use "layout/site";
-@use "components/post";
+@import "base/reset";
+@import "base/fonts";
+@import "abstracts/tokens";
+@import "layout/site";
+@import "components/post";
