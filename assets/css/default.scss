@@ -1,4 +1,7 @@
 ---
 ---
-@use "resets";
-@use "main";
+@use "base/reset";
+@use "base/fonts";
+@use "abstracts/tokens";
+@use "layout/site";
+@use "components/post";

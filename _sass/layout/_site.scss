@@ -1,0 +1,30 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid black;
+
+  .logo {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 450;
+  }
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  padding: 16px 0;
+  text-align: center;
+  border-top: 1px solid black;
+}

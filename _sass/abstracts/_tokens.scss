@@ -1,0 +1,14 @@
+// Design tokens and shared CSS variables
+@use "abstracts/breakpoints" as *;
+
+:root {
+  --content-max-width: 100%;
+
+  @include bp(tablet) {
+    --content-max-width: 860px;
+  }
+
+  @include bp(desktop) {
+    --content-max-width: 1100px;
+  }
+}
