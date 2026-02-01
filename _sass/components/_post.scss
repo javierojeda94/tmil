@@ -1,13 +1,17 @@
+@import "abstracts/breakpoints";
+
 .post {
   padding: 32px 24px;
+
   .title, .published-at {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 450;
+    font-weight: 800;
     font-style: normal;
   }
+
   .title {
-    line-height: 24px;
+    line-height: 32px;
   }
 
   .content {
@@ -15,5 +19,29 @@
     font-optical-sizing: auto;
     font-weight: 450;
     font-style: normal;
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    .learning {
+      @include bp(tablet) {
+        padding: 0 16px;
+      }
+      @include bp(desktop) {
+        padding: 0 16px;
+      }
+    }
+  }
+
+  p.highlight {
+    border: 1px solid black;
+    padding: 8px;
+    background-color: lightgrey;
+  }
+
+  @include bp(desktop) {
+    max-width: 1000px;
+    margin: 0 auto;
   }
 }
