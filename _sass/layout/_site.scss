@@ -2,6 +2,9 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  ul {
+    margin-bottom: 16px;
+  }
 }
 
 header {
