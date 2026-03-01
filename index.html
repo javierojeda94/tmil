@@ -1,14 +1,12 @@
 ---
 layout: default
 ---
-
 {% assign post = site.posts.first %}
 {% if post %}
 <article class="post">
     <h1 class="title">{{ post.title }}</h1>
     <p class="published-at">{{ post.date | date: "%b %-d, %Y" }}</p>
     <div class="content">
-        ---
         {{ post.content }}
     </div>
 </article>

@@ -2,4 +2,18 @@
     <p id='main' class='logo'>
         :tmil
     </p>
+    <nav>
+        {% assign nav_year = site.posts.first.date | date: "%Y" %}
+        {% assign sorted_posts = site.posts | sort: "date" %}
+        {% for post in sorted_posts %}
+            {% assign post_year = post.date | date: "%Y" %}
+            {% if post_year == nav_year %}
+                {% assign is_current_post =  %}
+                <a href="{{ post.url | relative_url }}"
+                   {% if (page.url == post.url or page.url == "/" and post.url == site.posts.first.url) %} class="current-post" {% endif %}>
+                    {{ post.date | date: "%b" }}
+                </a>
+            {% endif %}
+        {% endfor %}
+    </nav>
 </header>
