@@ -85,8 +85,9 @@ title: "What a month!"
 </div>
 
 <div class="learning">
+    {% capture january_post_url %}{% post_url 2026-01-31-january %}{% endcapture %}
     <h3 class="title">Impostor Syndrome: Part 2</h3>
-    <p>Last month <a href="{% post_url 2026-01-31-january %}">I wrote</a> about how Impostor Syndrome affects
+    <p>Last month <a href="{{ january_post_url | relative_url }}">I wrote</a> about how Impostor Syndrome affects
         different in every new role and what we should do about it. This month I want to write a bit more about how
         I'm feeling. I'm still having these occasional thoughts about me not being enough for my current role. I will
         say that those thoughts are a "voice" and I will call that voice "ImSym" (if you think this is an early
