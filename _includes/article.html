@@ -1,0 +1,57 @@
+{% assign p = include.post %}
+<article class="post" data-post-id="{{ p.id }}">
+  <header class="hero">
+    <div class="meta" data-fade>
+      <span class="rule-line"></span>
+      <span class="month-label">{{ p.date | date: "%B %Y" | upcase }}</span>
+      <span class="meta-dot">·</span>
+      <span class="read-time">{{ include.content | number_of_words | divided_by: 200 | plus: 1 }} MIN READ</span>
+    </div>
+    <h1 class="title" data-fade data-delay="1">{{ p.title }}</h1>
+    <div class="hero-grid" data-fade data-delay="2">
+      <div class="byline">
+        <div><span class="dash">—</span> by {{ site.author }}</div>
+        <div>posted {{ p.date | date: "%b %-d, %Y" }}</div>
+        <div>filed under: this month i learned</div>
+      </div>
+      <div class="lede">
+        {% for para in p.lede %}
+          <p {% if forloop.first %}class="lede-lead"{% endif %}>{{ para }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </header>
+
+  <div class="body">
+    {{ include.content }}
+    {% include outro.html %}
+  </div>
+</article>
+
+<script>
+(function() {
+  function augmentArticle(root) {
+    if (root.dataset.augmented) return;
+    root.dataset.augmented = 'true';
+    var headings = root.querySelectorAll('.body > h2');
+    headings.forEach(function(h2, i) {
+      var wrap = document.createElement('div');
+      wrap.className = 'section-opener';
+      wrap.dataset.fade = '';
+      var num = String(i + 1).padStart(2, '0');
+      wrap.innerHTML =
+        '<span class="numeral" aria-hidden="true">' + num + '</span>' +
+        '<span class="chapter-label">chapter ' + num + '</span>';
+      h2.parentNode.insertBefore(wrap, h2);
+      wrap.appendChild(h2);
+    });
+    var els = root.querySelectorAll('.body > p, .body blockquote');
+    els.forEach(function(el) {
+      el.dataset.fade = '';
+    });
+  }
+  var article = document.querySelector('article.post');
+  if (article) augmentArticle(article);
+  window.augmentArticle = augmentArticle;
+})();
+</script>
