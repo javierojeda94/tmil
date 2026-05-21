@@ -1,11 +1,16 @@
+.post {
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
 .body {
   padding: 0 24px;
-  max-width: 100%;
-  margin: 0 auto;
 
   @media (min-width: 720px) {
-    padding: 0 160px 0 200px;
     max-width: 980px;
+    margin: 0 auto;
+    padding: 0 160px 0 200px;
   }
 }
 
