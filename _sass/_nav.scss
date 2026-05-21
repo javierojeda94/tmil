@@ -1,1 +1,209 @@
-// Phase D: nav styles
+// Desktop nav
+.month-nav {
+  display: none;
+  align-items: baseline;
+  gap: 6px;
+
+  @media (min-width: 720px) {
+    display: flex;
+  }
+}
+
+.month-nav .year-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  margin-right: 6px;
+}
+
+.month-nav [data-month] {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  padding: 6px 10px;
+  border-radius: var(--radius-button);
+  color: var(--ink-soft);
+  background: transparent;
+  text-decoration: none;
+  transition: all 200ms ease;
+
+  &:hover {
+    color: var(--rust);
+  }
+
+  &[data-active] {
+    background: var(--ink);
+    color: var(--bg);
+  }
+}
+
+.month-nav .sep {
+  color: var(--rule);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+// Year dropdown
+.year-dropdown {
+  position: relative;
+  margin-left: 14px;
+}
+
+[data-dropdown-trigger] {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  padding: 6px 10px;
+  border-radius: var(--radius-button);
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 200ms ease;
+
+  &:hover {
+    color: var(--ink-soft);
+  }
+
+  .chev {
+    font-size: 8px;
+    transition: transform 200ms ease;
+  }
+
+  &[aria-expanded="true"] .chev {
+    transform: rotate(180deg);
+  }
+}
+
+.year-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  box-shadow: var(--shadow-dropdown);
+  min-width: 200px;
+  padding: 6px 0;
+  z-index: 20;
+
+  a {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    padding: 8px 14px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: background 150ms ease;
+
+    &:hover {
+      background: var(--bg-deep);
+    }
+
+    &[data-active] {
+      color: var(--rust);
+      background: var(--bg-deep);
+    }
+  }
+
+  .month-abbrev {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--muted);
+    margin-right: 10px;
+    text-transform: lowercase;
+  }
+}
+
+// Mobile trigger
+.mobile-nav-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--ink);
+  color: var(--bg);
+  border: none;
+  border-radius: var(--radius-button);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+
+  .chev {
+    font-size: 8px;
+    transition: transform 200ms ease;
+  }
+
+  &[aria-expanded="true"] .chev {
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: 720px) {
+    display: none;
+  }
+}
+
+// Mobile sheet
+.mobile-sheet {
+  .backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 23, 20, 0.35);
+    z-index: 100;
+  }
+
+  .panel {
+    position: fixed;
+    top: 70px;
+    left: 16px;
+    right: 16px;
+    max-height: 75vh;
+    overflow-y: auto;
+    background: var(--bg);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow-sheet);
+    z-index: 101;
+  }
+
+  .year-header {
+    padding: 10px 14px 6px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    background: var(--bg-deep);
+  }
+
+  .year-block a {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    padding: 12px 14px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-top: 1px solid var(--rule);
+
+    &[data-active] {
+      color: var(--rust);
+      background: var(--bg-deep);
+    }
+  }
+
+  .month-abbrev {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--muted);
+    margin-right: 10px;
+  }
+}
