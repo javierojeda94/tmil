@@ -27,31 +27,3 @@
     {% include outro.html %}
   </div>
 </article>
-
-<script>
-(function() {
-  function augmentArticle(root) {
-    if (root.dataset.augmented) return;
-    root.dataset.augmented = 'true';
-    var headings = root.querySelectorAll('.body > h2');
-    headings.forEach(function(h2, i) {
-      var wrap = document.createElement('div');
-      wrap.className = 'section-opener';
-      wrap.dataset.fade = '';
-      var num = String(i + 1).padStart(2, '0');
-      wrap.innerHTML =
-        '<span class="numeral" aria-hidden="true">' + num + '</span>' +
-        '<span class="chapter-label">chapter ' + num + '</span>';
-      h2.parentNode.insertBefore(wrap, h2);
-      wrap.appendChild(h2);
-    });
-    var els = root.querySelectorAll('.body > p, .body blockquote');
-    els.forEach(function(el) {
-      el.dataset.fade = '';
-    });
-  }
-  var article = document.querySelector('article.post');
-  if (article) augmentArticle(article);
-  window.augmentArticle = augmentArticle;
-})();
-</script>
