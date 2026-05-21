@@ -1,0 +1,119 @@
+.outro {
+  margin-top: 80px;
+
+  @media (min-width: 720px) {
+    margin-top: 140px;
+  }
+}
+
+.outro .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--rust);
+
+  .rule-line {
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: var(--rust);
+  }
+}
+
+.outro-headline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  max-width: 800px;
+  margin-bottom: 18px;
+
+  @media (min-width: 720px) {
+    font-size: 64px;
+  }
+}
+
+.outro-line-1 {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 640px;
+  margin-bottom: 10px;
+
+  @media (min-width: 720px) {
+    font-size: 24px;
+  }
+}
+
+.outro-line-2 {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 580px;
+  margin-bottom: 28px;
+
+  @media (min-width: 720px) {
+    font-size: 18px;
+  }
+}
+
+.cta-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 22px;
+  background: var(--rust);
+  color: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border-radius: var(--radius-button);
+  box-shadow: var(--shadow-cta);
+  transition: all 240ms ease;
+
+  @media (min-width: 720px) {
+    padding: 20px 28px 20px 32px;
+    font-size: 13px;
+  }
+
+  .arrow {
+    font-size: 16px;
+  }
+
+  &:hover {
+    background: var(--rust-deep);
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-cta-hover);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-linkedin:hover {
+    transform: none;
+    box-shadow: var(--shadow-cta);
+  }
+}
+
+.cta-sub {
+  margin-top: 18px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--muted);
+
+  @media (min-width: 720px) {
+    font-size: 17px;
+  }
+}

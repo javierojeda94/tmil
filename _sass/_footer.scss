@@ -1,0 +1,28 @@
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 80px;
+  padding: 28px 24px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+
+  a {
+    color: var(--muted);
+    text-decoration: none;
+    &:hover { color: var(--rust); }
+  }
+
+  @media (min-width: 720px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 120px;
+    padding: 40px 96px;
+    font-size: 11px;
+  }
+}

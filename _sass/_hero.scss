@@ -1,0 +1,135 @@
+.hero {
+  padding: 32px 24px 56px;
+
+  @media (min-width: 720px) {
+    padding: 72px 96px 96px;
+  }
+}
+
+.hero .meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  line-height: 1.8;
+  margin-bottom: 22px;
+
+  @media (min-width: 720px) {
+    font-size: 11px;
+    margin-bottom: 32px;
+  }
+}
+
+.hero .meta .rule-line {
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--rust);
+}
+
+.hero .meta .month-label {
+  color: var(--rust);
+}
+
+.hero .meta .meta-dot {
+  color: var(--muted);
+}
+
+.hero .meta .read-time {
+  color: var(--muted);
+}
+
+.hero .title {
+  font-family: var(--font-display);
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  max-width: 1000px;
+  font-variation-settings: 'opsz' 144, 'SOFT' 30;
+
+  @media (min-width: 720px) {
+    font-size: 112px;
+  }
+}
+
+.hero-grid {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @media (min-width: 720px) {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+    margin-top: 56px;
+  }
+}
+
+.byline {
+  border-top: 1px solid var(--rule);
+  padding-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1.8;
+  color: var(--muted);
+  order: 2;
+
+  @media (min-width: 720px) {
+    padding-top: 18px;
+    font-size: 12px;
+    order: 0;
+  }
+
+  .dash {
+    color: var(--rust);
+  }
+
+  div:first-child {
+    color: var(--ink-soft);
+
+    .dash {
+      color: var(--rust);
+    }
+  }
+}
+
+.lede {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  order: 1;
+
+  @media (min-width: 720px) {
+    gap: 18px;
+    order: 0;
+  }
+
+  p {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.36;
+    color: var(--muted);
+    font-variation-settings: 'SOFT' 50;
+    font-size: 18px;
+
+    @media (min-width: 720px) {
+      font-size: 22px;
+    }
+  }
+
+  .lede-lead {
+    color: var(--ink-soft);
+    font-size: 22px;
+
+    @media (min-width: 720px) {
+      font-size: 28px;
+    }
+  }
+}
