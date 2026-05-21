@@ -1,0 +1,37 @@
+:root {
+  // surfaces
+  --bg:        #F9F7F4;
+  --bg-deep:   #EEEBE6;
+
+  // ink
+  --ink:       #1A1A1A;
+  --ink-soft:  #2A2A2A;
+  --muted:     #7E7C78;
+
+  // lines
+  --rule:      #DEDBD4;
+
+  // accents
+  --rust:      #C2202C;
+  --rust-deep: #94131E;
+
+  // fonts
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  // radii & shadows
+  --radius-button: 2px;
+  --shadow-cta:       0 1px 0 rgba(0,0,0,0.08);
+  --shadow-cta-hover: 4px 4px 0 var(--ink);
+  --shadow-sheet:     0 12px 32px rgba(0,0,0,0.25);
+  --shadow-dropdown:  3px 3px 0 var(--ink);
+
+  // motion
+  --ease-out:    cubic-bezier(.2, .7, .2, 1);
+  --ease-soft:   cubic-bezier(.2, 0,  .2, 1);
+  --dur-fade-in: 720ms;
+  --dur-page:    280ms;
+  --dur-page-in: 320ms;
+  --dur-hover:   200ms;
+}

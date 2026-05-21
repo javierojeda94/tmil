@@ -1,4 +1,14 @@
+title: ":tmil"
+author: "Javier Ojeda"
+description: "this · month · i · learned"
+author_linkedin: "https://www.linkedin.com/in/javierojedamaldonado/"
 permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+exclude:
+  - design_handoff_tmil
+sass:
+  style: compressed
 defaults:
   - scope:
       path: ""
