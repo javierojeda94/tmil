@@ -1,0 +1,67 @@
+---
+title: "Fresh coat of paint"
+lede:
+  - "If you are reading this on the blog itself, you might have already noticed something looks different."
+  - "This month I spent some time giving it a proper redesign, and the process taught me more about AI tools than it did about design. One learning this month, but it is a good one."
+---
+
+<h2>:tmil x Claude Design</h2>
+<p>
+    The original design of this blog was, to put it nicely, boring. High contrast, no personality, nothing
+    that made it feel like mine. I wanted something more appealing and easier to read, but I also wanted an
+    excuse to push Claude Design beyond the small suggestions I had used it for before. This was my first
+    attempt at a full redesign with it.
+</p>
+<p>
+    The process had three steps. First, I opened a normal Claude session and worked through what I didn't like
+    about the old design and what I wanted to achieve. No design guidelines, colors, wireframes, typography... Nothing of that, just a conversation.
+    The goal of that session wasn't to design anything, it was to generate a clear, specific prompt I could hand
+    off to Claude Design. Once I had that prompt, I let Claude Design make the actual design decisions.
+</p>
+<p>
+    The result? Generic. My original prompt asked for something inspired by the asymmetric, unconventional
+    layouts you see winning awards on <a href="https://www.awwwards.com/" target="_blank">Awwwards</a>.
+    What I got was another clean, readable design — nothing that surprised me or pushed in that direction at all.
+    That's when I decided to spent a couple of days manually proposing the things the tool
+    couldn't: the unaligned paragraphs, the page transitions, the reading progress bar, and a few other details.
+</p>
+<blockquote>
+    Claude Design is genuinely useful for structured design decisions, but it's not yet a creative partner in
+    the full sense. It executes well inside familiar patterns. The moment you push toward something unconventional,
+    you're on your own and the tool becomes a collaborator rather than a creative lead. The creative direction
+    still has to come from a designer.
+</blockquote>
+<p>
+    Should I have hired a designer instead? For this project, no. The goal was to ship a better design, yes, but I also
+    wanted to test the boundaries of what Claude Design could do. Now I know, if I had wanted something truly distinctive, 
+    then yes, I should have: there's a ceiling here that, for now, only a human designer can break through.
+</p>
+
+<h2>I need(ed) to get my finances in order</h2>
+<p>
+    I have 8 bank accounts across two banks. For a long time, keeping them reconciled and tracked in one place
+    was one of those tasks that lived permanently on my to-do list, but never urgent enough to
+    actually sit down and do. The manual work involved was just too discouraging to start.
+</p>
+<p>
+    This month I finally did it. I used Claude and the <a href="https://budgetbakers.com/en/" target="_blank">WalletApp</a> MCP 
+    server to plan and orchestrate the process, Python scripts to parse and reconcile months of bank statements, and a Playwright automation to drive
+    WalletApp's web UI and import hundreds of payments and transactions, record by record. The app has no bulk import API and I was not gonna do it manually,
+    so a bot clicking through the browser was the only option.
+</p>
+<p>
+    It worked. Mostly. Twenty-one records failed on the first run due to mismatched dropdown values. A post-import
+    audit via MCP surfaced two phantom records invisible in the UI. One entry silently failed to save without
+    throwing an error. There's also a small money gap between my computed balance and what the bank app shows.
+    And I also caught a record I had manually entered wrong at some point with one digit off, and I had nearly
+    logged 33 times the amount I actually transferred.
+</p>
+<blockquote>
+    An automated script doesn't make mistakes: same input, same output, every time. AI and humans don't have that
+    guarantee. That's not a reason to remove humans from the loop but instead it's a reason to be intentional about
+    which parts of the loop actually need one.
+</blockquote>
+<p>
+    This is still a WIP project, I'll write a much more detailed post once everything is fully closed and ready for future use. There's a lot more to say about the
+    process, the tools, and what I'd do differently if I had to start over.
+</p>
