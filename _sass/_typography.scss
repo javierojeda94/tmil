@@ -6,3 +6,9 @@ body {
   background: var(--bg);
   overflow-x: clip;
 }
+
+a {
+  color: var(--rust);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
